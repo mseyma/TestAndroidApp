@@ -33,6 +33,25 @@ android {
             signingConfig signingConfigs.internalConfig
         }
     }
+
+    splits {
+        abi {
+            enable true
+
+            reset()
+
+            include "x86", "armeabi-v7a", "arm64-v8a"
+
+            universalApk true
+        }
+        density {
+            enable true
+
+            exclude "xhdpi", "xxhdpi", "xxxhdpi"
+
+            compatibleScreens "small", "normal", "large", "xlarge"
+        }
+    }
 }
 
 dependencies {
