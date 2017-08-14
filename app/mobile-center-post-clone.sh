@@ -3,3 +3,5 @@ echo "1. Post clone"
 env
 
 /usr/bin/sqlite3 -version
+
+git --version
