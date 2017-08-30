@@ -2,7 +2,7 @@
 echo "1. Post clone"
 
 
-echo "THIS IS AWESOME!"
+echo "\n\n\n\n\n\nTHIS IS AWESOME!\n\n\n\n\n\n"
 
 echo "ENVIRONMENT"
 env
