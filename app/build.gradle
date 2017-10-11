@@ -9,8 +9,8 @@ android {
             storePassword System.getProperty("MOBILECENTER_KEYSTORE_PASSWORD")
         }
     }
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "de.bowstreet.testandroidapp"
         minSdkVersion 15
@@ -41,11 +41,11 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:appcompat-v7:26.0.2'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support.constraint:constraint-layout-solver:1.0.2'
 
-    def mobileCenterSdkVersion = '0.3.3'
+    def mobileCenterSdkVersion = '0.11.2'
     compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
     compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
 
