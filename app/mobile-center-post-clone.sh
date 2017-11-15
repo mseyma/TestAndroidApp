@@ -7,4 +7,4 @@ echo "\n\n\n\n\n\nTHIS IS AWESOME!\n\n\n\n\n\n"
 echo "ENVIRONMENT"
 env
 
-npm -v
+npm install -g npm@4
