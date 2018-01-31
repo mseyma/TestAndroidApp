@@ -10,7 +10,7 @@ android {
         }
     }
     compileSdkVersion 27
-    buildToolsVersion "27.0.0"
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "de.bowstreet.testandroidapp"
         minSdkVersion 15
@@ -39,19 +39,19 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile 'com.android.support:appcompat-v7:27.0.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support.constraint:constraint-layout-solver:1.0.2'
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support.constraint:constraint-layout-solver:1.0.2'
 
     def mobileCenterSdkVersion = '0.11.2'
-    compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
-    compile "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
+    implementation "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
+    implementation "com.microsoft.azure.mobile:mobile-center-crashes:${mobileCenterSdkVersion}"
 
-    testCompile 'junit:junit:4.12'
-    compile project(':library')
+    androidTestImplementation 'junit:junit:4.12'
+    implementation project(':library')
 }
