@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         mButton = (Button) findViewById(R.id.button);
-        mButton.setOnClick
-        Listener(new View.OnClickListener() {
+        mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 throw new RuntimeException("Test exception");
