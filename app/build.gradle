@@ -10,12 +10,12 @@ android {
             storePassword System.getProperty("MOBILECENTER_KEYSTORE_PASSWORD")
         }
     }
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 27
+    buildToolsVersion "27.0.0"
     defaultConfig {
         applicationId "de.bowstreet.testandroidapp"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 27
         versionCode System.getProperty("MOBILECENTER_BUILD_VERSION", "1").toInteger()
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -26,6 +26,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    flavorDimensions "release"
+    productFlavors {
+        live {
+            dimension "release"
+
+        }
+        internal {
+            dimension "release"
+            signingConfig signingConfigs.internalConfig
+        }
+    }
 }
 
 dependencies {
@@ -34,7 +45,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile 'com.android.support:appcompat-v7:26.0.1'
+    compile 'com.android.support:appcompat-v7:27.0.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support.constraint:constraint-layout-solver:1.0.2'
 
