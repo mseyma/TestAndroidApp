@@ -2,4 +2,4 @@
 echo "1. Post clone"
 env
 
-sdkmanager --list
+$ANDROID_HOME/tools/bin/sdkmanager --list
