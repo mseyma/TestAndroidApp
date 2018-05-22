@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         MobileCenter.start(getApplication(), "675da273-5716-4855-9dd0-431fe51ebfef", Analytics.class, Crashes.class);
-
-
+        
+        //this is a button
         mButton = (Button) findViewById(R.id.button);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
